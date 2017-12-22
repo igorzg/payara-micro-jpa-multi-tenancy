@@ -1,0 +1,13 @@
+.idea
+*.iml
+*.ipr
+*.iws
+build
+.gradle
+gradle
+target
+repo
+derby.log
+log
+payara-micro.jar
+Dockerrun.aws.*.json

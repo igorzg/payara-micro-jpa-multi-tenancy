@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ejb-jar xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_0.xsd">
+    <enterprise-beans>
+        <session>
+            <ejb-name>DatabaseConnectionProvider</ejb-name>
+            <session-type>Stateless</session-type>
+            <transaction-type>Container</transaction-type>
+
+            <persistence-context-ref>
+                <persistence-context-ref-name>em/db1</persistence-context-ref-name>
+                <persistence-unit-name>db1</persistence-unit-name>
+            </persistence-context-ref>
+
+            <persistence-context-ref>
+                <persistence-context-ref-name>em/db2</persistence-context-ref-name>
+                <persistence-unit-name>db2</persistence-unit-name>
+            </persistence-context-ref>
+
+        </session>
+    </enterprise-beans>
+</ejb-jar>

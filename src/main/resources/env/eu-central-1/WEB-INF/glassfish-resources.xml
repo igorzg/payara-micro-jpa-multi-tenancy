@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources PUBLIC
+        "-//GlassFish.org//DTD GlassFish Application Server 3.1 Resource Definitions//EN"
+        "http://glassfish.org/dtds/glassfish-resources_1_5.dtd">
+
+<resources>
+
+
+    <!-- db1 -->
+    <jdbc-connection-pool
+            datasource-classname="com.mysql.jdbc.jdbc2.optional.MysqlDataSource" name="db1"
+            res-type="javax.sql.DataSource"
+            steady-pool-size="1"
+            is-connection-validation-required="true"
+            connection-validation-method="meta-data"
+            max-pool-size="10">
+        <property name="password" value="icoder_pwd"/>
+        <property name="user" value="icoder_user"/>
+        <property name="databaseName" value="icoder_db"/>
+        <property name="serverName" value="localhost"/>
+        <property name="portNumber" value="3310"/>
+        <property name="zeroDateTimeBehavior" value="convertToNull"/>
+    </jdbc-connection-pool>
+    <jdbc-resource pool-name="db1" jndi-name="jdbc/db1"/>
+
+
+    <!-- db2 -->
+    <jdbc-connection-pool
+            datasource-classname="com.mysql.jdbc.jdbc2.optional.MysqlDataSource" name="db2"
+            res-type="javax.sql.DataSource"
+            steady-pool-size="1"
+            is-connection-validation-required="true"
+            connection-validation-method="meta-data"
+            max-pool-size="10">
+        <property name="password" value="icoder_pwd"/>
+        <property name="user" value="icoder_user"/>
+        <property name="databaseName" value="icoder_db"/>
+        <property name="serverName" value="localhost"/>
+        <property name="portNumber" value="3311"/>
+        <property name="zeroDateTimeBehavior" value="convertToNull"/>
+    </jdbc-connection-pool>
+    <jdbc-resource pool-name="db2" jndi-name="jdbc/db2"/>
+
+
+</resources>
