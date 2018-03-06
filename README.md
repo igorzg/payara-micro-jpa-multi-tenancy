@@ -47,7 +47,11 @@ gradle buildDocker -Penv=prod
 gradle test
 ```
 
-
+### Starting integration tests:
+```sh
+docker-compose up -d
+gradle clean build itest
+```
 
 ### Example running apps manually:
 
