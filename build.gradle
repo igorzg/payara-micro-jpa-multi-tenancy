@@ -75,6 +75,7 @@ dependencies {
             "org.apache.logging.log4j:log4j-core:$log4jVersion",
             "org.apache.logging.log4j:log4j-api:$log4jVersion",
             "org.apache.logging.log4j:log4j-slf4j-impl:$log4jVersion",
+
             "org.slf4j:slf4j-api:$slf4jApiVersion",
             "org.reflections:reflections:$reflectionsVersion",
             "com.lmax:disruptor:$disruptorVersion",
@@ -97,6 +98,7 @@ dependencies {
     )
     /// dependencies for itest
     integrationCompile(
+             "com.google.guava:guava:$guavaVersion",
             "fish.payara.extras:payara-embedded-all:$pmv",
             "org.jboss.arquillian.junit:arquillian-junit-container:$junitArquillian",
             "org.jboss.arquillian.container:arquillian-glassfish-embedded-3.1:$glassfishEmbedded",

@@ -7,6 +7,17 @@
             <ejb-name>DatabaseConnectionProvider</ejb-name>
             <session-type>Stateless</session-type>
             <transaction-type>Container</transaction-type>
+
+            <persistence-context-ref>
+                <persistence-context-ref-name>em/db1</persistence-context-ref-name>
+                <persistence-unit-name>db1</persistence-unit-name>
+            </persistence-context-ref>
+
+            <persistence-context-ref>
+                <persistence-context-ref-name>em/db2</persistence-context-ref-name>
+                <persistence-unit-name>db2</persistence-unit-name>
+            </persistence-context-ref>
+
         </session>
     </enterprise-beans>
 </ejb-jar>
