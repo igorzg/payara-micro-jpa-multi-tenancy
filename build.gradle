@@ -257,7 +257,7 @@ task dockerComposeDown(type: Exec) {
  * Start payara micro server
  */
 task startServer(type: Exec, dependsOn: war) {
-    commandLine "java", "-jar", "./payara-micro.jar", "--deploy", "$warDir/${warName}.war", "--noCluster", "true"
+    commandLine "java", "-jar", "./payara-micro.jar", "--deploy", "$warDir/${warName}.war"
     doFirst {
         if (!file("./payara-micro.jar").exists()) {
             tasks.downloadPayaraMicro.execute()
